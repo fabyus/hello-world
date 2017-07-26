@@ -213,7 +213,7 @@
     font-size: 26px;
 }
 
-#interceptor {
+.interceptor {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -222,7 +222,7 @@
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	opacity: 0;
+	opacity: 0.1;
 }
 
 .input_bool_pill {
@@ -267,18 +267,6 @@
 	background-color: #ffffff;
 	overflow: hidden;
 	cursor: e-resize;
-}
-
-.input_color,
-.input_color_cell {
-	background-image: url(https://raw.githubusercontent.com/fabyus/hello-world/master/TransparencyGrid.png);
-	position: relative;
-	cursor: pointer;
-}
-
-.input_color_cell {
-	margin: 0px;
-	position: absolute;
 }
 
 .input_range_slider,
@@ -342,7 +330,7 @@
 
 .input_horzenum_value {
 	display: inline-block;
-	width: 100%;
+	width: 160px;
 	margin: 9px 0px;
 	text-align: center;
 	font-size: 16px;
@@ -410,6 +398,18 @@
 	height: 100%;
 }
 
+.input_color,
+.input_color_cell {
+	background-image: url(https://raw.githubusercontent.com/fabyus/hello-world/master/TransparencyGrid.png);
+	position: relative;
+	cursor: pointer;
+}
+
+.input_color_cell {
+	margin: 0px;
+	position: absolute;
+}
+
 .input_color_text {
 	position: absolute;
 	top: 0px;
@@ -430,11 +430,10 @@
 }
 
 .input_color_switchpanel>div{
-	display: inline-block;
 	width: 30%;
 	min-height: 32px;
 	margin: 0px;
-	/*float: left;*/
+	float: left;
 	font-size: 20px;
 	user-select: none;
 }
