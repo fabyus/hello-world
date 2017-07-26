@@ -283,7 +283,7 @@
 }
 
 .input_range_text,
-.input_range_text:focus
+.input_range_text:focus,
 .input_color_text,
 .input_color_text:focus  {
 	display: block;
@@ -312,7 +312,6 @@
 }
 
 .input_horzenum_left {
-	margin: 0px 0px 0px 8px;
 	border-radius: 10px 0px 0px 10px;
 }
 
@@ -362,7 +361,6 @@
 	display: inline-block;
 	width: 190px;
 	height: 34px;
-	margin: 0px 0px 0px 8px;
 	border-radius: 10px 0px 0px 10px;
 	background-color: #ffffff;
 	overflow: hidden;
@@ -412,7 +410,7 @@
 	cursor: pointer;
 }
 
-body .input_color_cell {
+body>.input_color_cell {
 	margin: 0px;
 	position: absolute;
 }
