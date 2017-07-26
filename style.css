@@ -257,7 +257,6 @@
 }
 
 .input_range,
-.input_color,
 .input_color_cell {
 	width: 92%;
 	max-width: 220px;
@@ -297,6 +296,10 @@
 	border-style: none;
 	outline: none;
 	user-select: none;
+}
+
+.input_horzenum {
+	margin: 4px 8px;
 }
 
 .input_horzenum_button {
@@ -342,11 +345,15 @@
 	left: 0px;
 }
 
+.input_vertenum {
+	margin: 4px 8px;
+}
+
 .input_vertenum_button {
 	display: inline-block;
 	width: 30px;
 	height: 34px;
-	margin: 0px;
+	margin: 1px 0px 0px 0px;
 	border-radius: 0px 10px 10px 0px;
 	cursor: pointer;
 }
@@ -398,14 +405,14 @@
 	height: 100%;
 }
 
-.input_color,
 .input_color_cell {
+	margin: 4px 8px;
 	background-image: url(https://raw.githubusercontent.com/fabyus/hello-world/master/TransparencyGrid.png);
 	position: relative;
 	cursor: pointer;
 }
 
-.input_color_cell {
+body .input_color_cell {
 	margin: 0px;
 	position: absolute;
 }
