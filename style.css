@@ -1,36 +1,469 @@
-.button {width:150px; display:block; font-size: 24px; margin: 8px auto 8px; cursor:pointer; padding:16px 0; text-align:center; border-radius:10px; text-decoration:none;}
-.disabled {cursor:not-allowed;}
-.left {float:left;}
-.right {float:right;}
-.inline {display:inline-block; margin:8px;}
- .invisible {display:none;}
-.logo {font-family: 'Princess Sofia', cursive;}
-#loader {width:100px; margin:200px auto; display:block;}
-#loader div {border: 14px solid #7fa39b; border-top: 14px solid #2ae2d6; border-radius:50%; width:80px; height:80px; position:relative; z-index:5; animation: loaderSpin 1.5s linear infinite;}
-.miniLoader {width:50px; margin:auto; display:block;}
-.miniLoader div {border: 6px solid #7fa39b; border-top: 6px solid #2ae2d6; border-radius:50%; width:40px; height:40px; animation: loaderSpin 1.5s linear infinite;}
-@keyframes loaderSpin {0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);}}
-#fader {margin:0px; padding:0px; position:fixed; top:0px; left:0px; width:100%; height:100%; background-color:#000000; opacity:0.5; z-index:2; display:block;}
-#popupper {margin:0px; padding:0px; position:fixed; top:0px; left:0px; width:100%; height:100%; z-index:3; display:none;}
-#popup {width:60%; margin:200px auto 40px; padding:40px; text-align:center;}
-#dashbar {position:fixed; top:0px; left:0px; width:100%; height:40px; display:none; padding:8px;}
-#dashbar div {display:inline-block; font-size:26px; margin:0px 12px;}
-#mainWrapper {margin:0px; padding:0px; position:absolute; top:40px; left:0px; width:100%;}
-.miniButton {display:inline-block; font-size: 20px; margin:8px; cursor:pointer; padding:6px 10px; text-align:center; border-radius:10px; text-decoration:none;}
+/*
+    Labels
+*/
+.invisible {
+    display: none;
+}
 
-.inputSlot {width:100%; height:48px;}
-.inputBox {display:inline-block; width:50%; height:48px; padding:0px; margin:0px; overflow:hidden;}
-.inputLabel {height:32px; margin:8px; float:right; font-size:26px;}
-.inputBoolPill {display:inline-block; width:64px; height:32px; margin:8px; border-radius:15px; transition:background-color 500ms;}
-.inputBoolBall {width:24px; height:24px; margin:4px; border-radius:100%; position:relative; transition:left 500ms}
-.inputText, .inputText:focus {border-radius: 10px; padding:1px 10px; border-style: none; outline: none; width:200px; height:32px; font-size:16px; margin:4px 8px;}
-.inputRange {background-color:#ffffff; border-radius:10px; margin:4px 8px; width:220px; height:34px; overflow:hidden;}
-.inputRangeSlider, .inputRangeSlider:focus {border-radius:10px 0px 0px 10px; margin:0px; padding:0px; height:34px; min-width:0px; max-width:220px; font-size:16px; word-wrap:normal;}
-.inputRangeText, .inputRangeText:focus {padding:8px 10px; font-size:16px; display:block; width:200px; height:18px; overflow:hidden; word-wrap:normal; border-style: none; outline: none;}
-#interceptor {margin:0px; padding:0px; position:fixed; top:0px; left:0px; width:100%; height:100%; z-index:2; display:block;}
-.inputHorzEnumLeft {display:inline-block; width:30px; height:34px; margin:0px; border-radius:10px 0px 0px 10px;}
-.inputHorzEnumRight {display:inline-block; width:30px; height:34px; margin:0px; border-radius:0px 10px 10px 0px;}
-.inputHorzEnumCell {display:inline-block; width:160px; height:34px; margin:0px; background-color:#ffffff; overflow:hidden;}
-.inputHorzEnumValue {width:100%; text-align:center; margin:9px 0px; font-size:16px;}
-svg {width:100%; height:100%;}
-svg polygon {fill:#000000; fill-opacity:0.15; stroke-width:0;}
+.disabled {
+	cursor: not-allowed;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.inline {
+	display: inline-block;
+	margin: 8px;
+}
+
+/*
+    Customizable !!Colors written here (with some exceptions) are not final and will be decided and applied runtime base on user preferences
+*/
+
+.color_bg {
+    background-color: #E7D6FF;
+}
+
+.color_text {
+    background-color: #192231;
+}
+
+.color_primary {
+    background-color: #00FFBB;
+}
+
+.color_secondary {
+    background-color: #00A1FF;
+}
+
+.color_disabled {
+    background-color: #cccccc;
+}
+
+.color_primary.highlightable:hover,
+.color_primary.highlightable:active {
+    background-color: #66FFDB;
+}
+
+.color_secondary.highlightable:hover,
+.color_secondary.highlightable:active {
+    background-color: #32B4FF;
+}
+
+.color_disabled.highlightable:hover,
+.color_disabled.highlightable:active {
+    background-color: #dddddd;
+}
+
+/*
+    Containers and Components
+*/
+
+#fader {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #000000;
+	opacity: 0.5;
+	z-index: 2;
+}
+
+#popupper {
+	display: none;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding:0px;
+	position:fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+}
+
+#popup {
+	width: 60%;
+	margin: 200px auto 40px;
+	padding: 40px;
+	text-align: center;
+}
+
+#dashbar {
+	display: none;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding: 8px;
+}
+
+#dashbar div {
+	display: inline-block;
+	margin: 0px 12px;
+	font-size: 26px;
+}
+
+#mainWrapper {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 40px;
+	left: 0px;
+}
+
+.miniButton {
+	display: inline-block;
+	margin: 8px;
+	padding: 6px 10px;
+	border-radius: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+}
+
+.button {
+	display: block;
+	width: 150px;
+	margin: 8px auto 8px;
+	padding: 16px 0;
+	border-radius: 10px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+}
+
+.logo {
+	font-family: 'Princess Sofia', cursive;
+}
+
+#loader {
+	display: block;
+	width: 100px;
+	margin: 200px auto;
+}
+
+#loader div {
+	width: 80px;
+	height: 80px;
+	border: 14px solid #7fa39b;
+	border-top: 14px solid #2ae2d6;
+	border-radius: 50%;
+	position: relative;
+	z-index: 5;
+	animation: loaderSpin 1.5s linear infinite;
+}
+
+.miniLoader {
+	display: block;
+	width: 50px;
+	margin: auto;
+}
+
+.miniLoader div {
+	border: 6px solid #7fa39b;
+	border-top: 6px solid #2ae2d6;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	animation: loaderSpin 1.5s linear infinite;
+}
+
+@keyframes loaderSpin {
+	0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);}
+}
+
+/*
+    Input
+*/
+
+.input_slot {
+    width: 100%;
+    height: 48px;
+}
+
+.input_slot_box {
+    display: inline-block;
+    width: 50%;
+    height: 48px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.input_slot_label {
+    height: 32px;
+    margin: 8px;
+    position: absolute;
+    right: 0px;
+    font-size: 26px;
+}
+
+#interceptor {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+}
+
+.input_bool_pill {
+    display: inline-block;
+    width: 64px;
+    height: 32px;
+    margin: 8px;
+    border-radius: 15px;
+    transition: background-color 500ms;
+    cursor: pointer;
+}
+
+.input_bool_ball {
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+    border-radius: 100%;
+    position: relative;
+    transition: left 500ms;
+}
+
+.input_text,
+.input_text:focus {
+    width: 200px;
+    height: 32px;
+    margin: 4px 8px;
+    padding: 1px 10px;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.input_range,
+.input_color,
+.input_color_cell {
+	width: 92%;
+	max-width: 220px;
+	height: 34px;
+	margin: 4px 8px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	overflow: hidden;
+	cursor: e-resize;
+}
+
+.input_color,
+.input_color_cell {
+	background-image: url(https://raw.githubusercontent.com/fabyus/hello-world/master/TransparencyGrid.png);
+	position: relative;
+	cursor: pointer;
+}
+
+.input_color_cell {
+	margin: 0px;
+	position: absolute;
+}
+
+.input_range_slider,
+.input_range_slider:focus {
+    min-width: 0px;
+    max-width: 220px;
+    height: 34px;
+    margin: 0px;
+    padding: 0px;
+    border-radius:10px 0px 0px 10px;
+    border-style: none;
+    outline: none;
+	font-size: 16px;
+    word-wrap: normal;
+}
+
+.input_range_text,
+.input_range_text:focus
+.input_color_text,
+.input_color_text:focus  {
+	display: block;
+	width: 200px;
+	height: 18px;
+	padding: 8px 10px;
+	font-size: 16px;
+	overflow: hidden;
+	word-wrap: normal;
+	border-style: none;
+	outline: none;
+	user-select: none;
+}
+
+.input_horzenum_button {
+	display: inline-block;
+	width: 30px;
+	height: 34px;
+	margin: 0px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.input_horzenum_left {
+	margin: 0px 0px 0px 8px;
+	border-radius: 10px 0px 0px 10px;
+}
+
+.input_horzenum_right {
+	border-radius: 0px 10px 10px 0px;
+}
+
+.input_horzenum_cell {
+	display: inline-block;
+	width: 160px;
+	height: 34px;
+	margin: 0px;
+	background-color: #ffffff;
+	overflow: hidden;
+	user-select: none;
+	cursor: default;
+}
+
+.input_horzenum_value {
+	display: inline-block;
+	width: 100%;
+	margin: 9px 0px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.input_horzenum_scroller {
+	display: inline-block;
+	position: relative;
+	left: 0px;
+}
+
+.input_vertenum_button {
+	display: inline-block;
+	width: 30px;
+	height: 34px;
+	margin: 0px;
+	border-radius: 0px 10px 10px 0px;
+	cursor: pointer;
+}
+
+.input_vertenum_cell {
+	display: inline-block;
+	width: 190px;
+	height: 34px;
+	margin: 0px 0px 0px 8px;
+	border-radius: 10px 0px 0px 10px;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+
+.input_vertenum_scroller {
+	display: inline-block;
+	width: 220px;
+	border-radius: 10px;
+	position: relative;
+	top: 0px;
+	transition: top 500ms;
+	overflow: hidden;
+	user-select: none;
+	cursor: default;
+}
+
+.input_vertenum_overlayscroller {
+	display: block;
+	width: 220px;
+	border-radius: 10px;
+	position: absolute;
+	overflow: hidden;
+	user-select: none;
+	cursor: default;
+	opacity: 0.5;
+}
+
+.input_vertenum_value {
+	width: 100%;
+	height: 16px;
+	margin: 0px 0px;
+	padding: 9px 0px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.input_color_bg {
+	width: 100%;
+	height: 100%;
+}
+
+.input_color_text {
+	position: absolute;
+	top: 0px;
+}
+
+.input_color_panel {
+	width: 236px;
+	border-radius: 10px;
+	position: absolute;
+}
+
+.input_color_wheelpanel{
+	margin: 4px;
+}
+
+.input_color_switchpanel{
+	width: 100%;
+}
+
+.input_color_switchpanel>div{
+	display: inline-block;
+	width: 30%;
+	min-height: 32px;
+	margin: 0px;
+	/*float: left;*/
+	font-size: 20px;
+	user-select: none;
+}
+
+.input_color_switchpanel>div:first-child{
+	margin: 12px 0px;
+	text-align: right;
+}
+
+.input_color_switchpanel>div:last-child{
+	margin: 12px 6px;
+	text-align: left;
+}
+
+.input_color_barspanel{
+	padding-bottom: 8px;
+}
+
+/*
+    stuff
+*/
+
+svg {
+	width:100%;
+	height:100%;
+}
+
+svg polygon {
+	fill:#000000;
+	fill-opacity:0.15;
+	stroke-width:0;
+}
