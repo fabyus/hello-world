@@ -1,28 +1,4 @@
 /*
-    Labels
-*/
-.invisible {
-    display: none;
-}
-
-.disabled {
-	cursor: not-allowed;
-}
-
-.left {
-	float: left;
-}
-
-.right {
-	float: right;
-}
-
-.inline {
-	display: inline-block;
-	margin: 8px;
-}
-
-/*
     Customizable !!Colors written here (with some exceptions) are not final and will be decided and applied runtime base on user preferences
 */
 
@@ -467,4 +443,28 @@ svg polygon {
 	fill:#000000;
 	fill-opacity:0.15;
 	stroke-width:0;
+}
+
+/*
+    Labels
+*/
+.invisible {
+    display: none;
+}
+
+.disabled {
+	cursor: not-allowed;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.inline {
+	display: inline-block;
+	margin: 8px;
 }
