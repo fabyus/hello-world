@@ -2,12 +2,69 @@
     Customizable !!Colors written here (with some exceptions) are not final and will be decided and applied runtime base on user preferences
 */
 
-.color_bg {
+.bg_bg {background-color: #E7D6FF;}
+.txt_bg {color: #E7D6FF;}
+.brd_bg {border-color: #E7D6FF;}
+.bghl_bg:hover, .bghl_bg.active {background-color: #E7D6FF;}
+.txthl_bg:hover, .txthl_bg.active {background-color: #E7D6FF;}
+.brdhl_bg:hover, .brdhl_bg.active {background-color: #E7D6FF;}
+
+.bg_txt {background-color: #192231;}
+.txt_txt {color: #192231;}
+.brd_txt {border-color: #192231;}
+.bghl_txt:hover, .bghl_txt.active {background-color: #192231;}
+.txthl_txt:hover, .txthl_txt.active {background-color: #192231;}
+.brdhl_txt:hover, .brdhl_txt.active {background-color: #192231;}
+
+.bg_dis {background-color: #cccccc;}
+.txt_dis {color: #cccccc;}
+.brd_dis {border-color: #cccccc;}
+.bghl_dis:hover, .bghl_dis.active {background-color: #cccccc;}
+.txthl_dis:hover, .txthl_dis.active {background-color: #cccccc;}
+.brdhl_dis:hover, .brdhl_dis.active {background-color: #cccccc;}
+.bg_dishl {background-color: #dddddd;}
+.txt_dishl {color: #dddddd;}
+.brd_dishl {border-color: #dddddd;}
+.bghl_dishl:hover, .bghl_dishl.active {background-color: #dddddd;}
+.txthl_dishl:hover, .txthl_dishl.active {background-color: #dddddd;}
+.brdhl_dishl:hover, .brdhl_dishl.active {background-color: #dddddd;}
+
+.bg_pri {background-color: #00FFBB;}
+.txt_pri {color: #00FFBB;}
+.brd_pri {border-color: #00FFBB;}
+.bghl_pri:hover, .bghl_pri.active {background-color: #00FFBB;}
+.txthl_pri:hover, .txthl_pri.active {background-color: #00FFBB;}
+.brdhl_pri:hover, .brdhl_pri.active {background-color: #00FFBB;}
+.bg_prihl {background-color: #66FFDB;}
+.txt_prihl {color: #66FFDB;}
+.brd_prihl {border-color: #66FFDB;}
+.bghl_prihl:hover, .bghl_prihl.active {background-color: #66FFDB;}
+.txthl_prihl:hover, .txthl_prihl.active {background-color: #66FFDB;}
+.brdhl_prihl:hover, .brdhl_prihl.active {background-color: #66FFDB;}
+
+.bg_sec {background-color: #00A1FF;}
+.txt_sec {color: #00A1FF;}
+.brd_sec {border-color: #00A1FF;}
+.bghl_sec:hover, .bghl_sec.active {background-color: #00A1FF;}
+.txthl_sec:hover, .txthl_sec.active {background-color: #00A1FF;}
+.brdhl_sec:hover, .brdhl_sec.active {background-color: #00A1FF;}
+.bg_sechl {background-color: #32B4FF;}
+.txt_sechl {color: #32B4FF;}
+.brd_sechl {border-color: #32B4FF;}
+.bghl_sechl:hover, .bghl_sechl.active {background-color: #32B4FF;}
+.txthl_sechl:hover, .txthl_sechl.active {background-color: #32B4FF;}
+.brdhl_sechl:hover, .brdhl_sechl.active {background-color: #32B4FF;}
+
+#loader div, .miniLoader div {border-top-color: #00A1FF;}
+a:link, a:visited {color: #00A1FF;}
+a:hover, a.active {border-color: #32B4FF;}
+
+/*.color_bg {
     background-color: #E7D6FF;
 }
 
 .color_text {
-    background-color: #192231;
+    color: #192231;
 }
 
 .color_primary {
@@ -35,7 +92,7 @@
 .color_disabled.highlightable:hover,
 .color_disabled.highlightable:active {
     background-color: #dddddd;
-}
+}*/
 
 /*
     Containers and Components
@@ -206,6 +263,7 @@
 }
 
 .input_bool_ball {
+    background-color: #E7D6FF;
     width: 24px;
     height: 24px;
     margin: 4px;
