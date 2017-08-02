@@ -1,9 +1,9 @@
 var inputIds = 0;
-var currentZIndex = 1;
+var currentZIndex = currentZIndex || 5;
 var inputSlots = new Array();
 var interceptors = new Array();
 
-{ //Slot re-reformed
+        { //Slot re-reformed
             function InputSlot(id, type, label, input) {
                 var that = this;
                 this.id = id;
@@ -1073,7 +1073,8 @@ var interceptors = new Array();
                         + '<div class="input_color_bg" style="background-color:'+input.getValueString(null,false)+'; opacity:'+input.a/255+';"></div>'
                         + '<div class="input_color_text">' + input.getValueString() + '</div>'
                     + '</div>'));
-                input.element = document.getElementById("i"+input.id);
+                input.element = document.getElementById("i" + input.id);
+                input.updateHex();
                 if(options.onChange != null){
                     input.onChange = options.onChange;
                 }
