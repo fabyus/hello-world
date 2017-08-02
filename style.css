@@ -5,21 +5,24 @@
 .bg_bg {background-color: #E7D6FF;}
 .txt_bg {color: #E7D6FF;}
 .brd_bg {border-color: #E7D6FF;}
-.bghl_bg:hover, .bghl_bg.active {background-color: #E7D6FF;}
+/*.bghl_bg:hover, .bghl_bg.active {background-color: #E7D6FF;}
 .txthl_bg:hover, .txthl_bg.active {background-color: #E7D6FF;}
-.brdhl_bg:hover, .brdhl_bg.active {background-color: #E7D6FF;}
+.brdhl_bg:hover, .brdhl_bg.active {background-color: #E7D6FF;}*/
 
 .bg_txt {background-color: #192231;}
 .txt_txt {color: #192231;}
 .brd_txt {border-color: #192231;}
-.bghl_txt:hover, .bghl_txt.active {background-color: #192231;}
+/*.bghl_txt:hover, .bghl_txt.active {background-color: #192231;}
 .txthl_txt:hover, .txthl_txt.active {background-color: #192231;}
-.brdhl_txt:hover, .brdhl_txt.active {background-color: #192231;}
+.brdhl_txt:hover, .brdhl_txt.active {background-color: #192231;}*/
 
 .bg_dis {background-color: #cccccc;}
 .txt_dis {color: #cccccc;}
 .brd_dis {border-color: #cccccc;}
-.bghl_dis:hover, .bghl_dis.active {background-color: #cccccc;}
+.bg_dis.bg_hl:hover, .bg_dis.bg_hl.active {background-color: #dddddd;}
+.txt_dis.txt_hl:hover, .txt_dis.txt_hl.active {background-color: #dddddd;}
+.brd_dis.brd_hl:hover, .brd_dis.txt_hl.active {background-color: #dddddd;}
+/*.bghl_dis:hover, .bghl_dis.active {background-color: #cccccc;}
 .txthl_dis:hover, .txthl_dis.active {background-color: #cccccc;}
 .brdhl_dis:hover, .brdhl_dis.active {background-color: #cccccc;}
 .bg_dishl {background-color: #dddddd;}
@@ -27,12 +30,15 @@
 .brd_dishl {border-color: #dddddd;}
 .bghl_dishl:hover, .bghl_dishl.active {background-color: #dddddd;}
 .txthl_dishl:hover, .txthl_dishl.active {background-color: #dddddd;}
-.brdhl_dishl:hover, .brdhl_dishl.active {background-color: #dddddd;}
+.brdhl_dishl:hover, .brdhl_dishl.active {background-color: #dddddd;}*/
 
 .bg_pri {background-color: #00FFBB;}
 .txt_pri {color: #00FFBB;}
 .brd_pri {border-color: #00FFBB;}
-.bghl_pri:hover, .bghl_pri.active {background-color: #00FFBB;}
+.bg_pri.bg_hl:hover, .bg_pri.bg_hl.active {background-color: #66FFDB;}
+.txt_pri.txt_hl:hover, .txt_pri.txt_hl.active {background-color: #66FFDB;}
+.brd_pri.brd_hl:hover, .brd_pri.txt_hl.active {background-color: #66FFDB;}
+/*.bghl_pri:hover, .bghl_pri.active {background-color: #00FFBB;}
 .txthl_pri:hover, .txthl_pri.active {background-color: #00FFBB;}
 .brdhl_pri:hover, .brdhl_pri.active {background-color: #00FFBB;}
 .bg_prihl {background-color: #66FFDB;}
@@ -40,12 +46,15 @@
 .brd_prihl {border-color: #66FFDB;}
 .bghl_prihl:hover, .bghl_prihl.active {background-color: #66FFDB;}
 .txthl_prihl:hover, .txthl_prihl.active {background-color: #66FFDB;}
-.brdhl_prihl:hover, .brdhl_prihl.active {background-color: #66FFDB;}
+.brdhl_prihl:hover, .brdhl_prihl.active {background-color: #66FFDB;}*/
 
 .bg_sec {background-color: #00A1FF;}
 .txt_sec {color: #00A1FF;}
 .brd_sec {border-color: #00A1FF;}
-.bghl_sec:hover, .bghl_sec.active {background-color: #00A1FF;}
+.bg_sec.bg_hl:hover, .bg_sec.bg_hl.active {background-color: #32B4FF;}
+.txt_sec.txt_hl:hover, .txt_sec.txt_hl.active {background-color: #32B4FF;}
+.brd_sec.brd_hl:hover, .brd_sec.txt_hl.active {background-color: #32B4FF;}
+/*.bghl_sec:hover, .bghl_sec.active {background-color: #00A1FF;}
 .txthl_sec:hover, .txthl_sec.active {background-color: #00A1FF;}
 .brdhl_sec:hover, .brdhl_sec.active {background-color: #00A1FF;}
 .bg_sechl {background-color: #32B4FF;}
@@ -53,7 +62,7 @@
 .brd_sechl {border-color: #32B4FF;}
 .bghl_sechl:hover, .bghl_sechl.active {background-color: #32B4FF;}
 .txthl_sechl:hover, .txthl_sechl.active {background-color: #32B4FF;}
-.brdhl_sechl:hover, .brdhl_sechl.active {background-color: #32B4FF;}
+.brdhl_sechl:hover, .brdhl_sechl.active {background-color: #32B4FF;}*/
 
 #loader div, .miniLoader div {border-top-color: #00A1FF;}
 a:link, a:visited {color: #00A1FF;}
@@ -450,6 +459,7 @@ body>.input_color_cell {
 .input_color_panel {
 	width: 236px;
 	border-radius: 10px;
+	border: 1px solid #192231;
 	position: absolute;
 }
 
