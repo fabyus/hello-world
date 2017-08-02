@@ -100,13 +100,13 @@
                     e = this.element;
                     if (e.firstElementChild.style.left == '0%') {
                         e.firstElementChild.style.left = '50%';
-                        e.classList.toggle('color_disabled', false);
-                        e.classList.toggle('color_secondary', true);
+                        e.classList.toggle('bg_dis', false);
+                        e.classList.toggle('bg_sec', true);
                         this.value = true;
                     } else {
                         e.firstElementChild.style.left = '0%';
-                        e.classList.toggle('color_secondary', false);
-                        e.classList.toggle('color_disabled', true);
+                        e.classList.toggle('bg_sec', false);
+                        e.classList.toggle('bg_dis', true);
                         this.value = false;
                     }
                     this.onChange();
@@ -124,8 +124,8 @@
                     target = newInputSlot(input.id, target, label, 'bool', input).rbox;
                 }
                 target.appendChild(new Range().createContextualFragment(''
-                    + '<div id="i' + input.id + '" class="input_bool_pill color_' + (value ? "secondary" : "disabled") + ' highlightable">'
-                        + '<div class="input_bool_ball color_bg" style="left:' + (value ? '50%' : '0%') + '"></div>'
+                    + '<div id="i' + input.id + '" class="input_bool_pill ' + (value ? "bg_sec" : "bg_dis") + ' bg_hl">'
+                        + '<div class="input_bool_ball" style="left:' + (value ? '50%' : '0%') + '"></div>'
                     + '</div>'));
                 input.element = document.getElementById("i"+input.id);
                 input.element.addEventListener("click", function(e) {
@@ -359,7 +359,7 @@
                 }
                 target.appendChild(new Range().createContextualFragment(''
                     + '<div id="i' + input.id + '" class="input_range">'
-                        + '<div class="input_range_slider color_secondary highlightable" style="width:' + ((input.value - input.min) * 220 / (input.max - input.min)) + 'px">'
+                        + '<div class="input_range_slider bg_sec bg_hl" style="width:' + ((input.value - input.min) * 220 / (input.max - input.min)) + 'px">'
                             + '<div class="input_range_text">' + input.prefix + input.value + input.suffix + '</div>'
                         + '</div>'
                     + '</div>'));
@@ -460,25 +460,25 @@
                     this.scroller.style.left = (-this.rect.width*this.value)+"px";
                     if (this.value == 0) {
                         if(!loop){ //disable left button
-                            this.lbutton.classList.toggle("color_secondary", false);
-                            this.lbutton.classList.toggle("highlightable", false);
-                            this.lbutton.classList.toggle("color_disabled", true);
+                            this.lbutton.classList.toggle("bg_sec", false);
+                            this.lbutton.classList.toggle("bg_hl", false);
+                            this.lbutton.classList.toggle("bg_dis", true);
                         }
                     }else{ //enable left button
-                        this.lbutton.classList.toggle("color_secondary", true);
-                        this.lbutton.classList.toggle("highlightable", true);
-                        this.lbutton.classList.toggle("color_disabled", false);
+                        this.lbutton.classList.toggle("bg_sec", true);
+                        this.lbutton.classList.toggle("bg_hl", true);
+                        this.lbutton.classList.toggle("bg_dis", false);
                     }
                     if (this.value == this.values.length-1) {
                         if(!loop){ //disable right button
-                            this.rbutton.classList.toggle("color_secondary", false);
-                            this.rbutton.classList.toggle("highlightable", false);
-                            this.rbutton.classList.toggle("color_disabled", true);
+                            this.rbutton.classList.toggle("bg_sec", false);
+                            this.rbutton.classList.toggle("bg_hl", false);
+                            this.rbutton.classList.toggle("bg_dis", true);
                         }
                     }else{ //enable right button
-                        this.rbutton.classList.toggle("color_secondary", true);
-                        this.rbutton.classList.toggle("highlightable", true);
-                        this.rbutton.classList.toggle("color_disabled", false);
+                        this.rbutton.classList.toggle("bg_sec", true);
+                        this.rbutton.classList.toggle("bg_hl", true);
+                        this.rbutton.classList.toggle("bg_dis", false);
                     }
                 };
             }
@@ -493,7 +493,7 @@
                 }
                 var semiproduct = ''
                         + '<div id="i' + input.id + '" class="input_horzenum">'
-                            + '<div class="input_horzenum_button input_horzenum_left '+ (input.value <= 0 && !input.loop ? 'color_disabled' : 'color_secondary highlightable') +'">'
+                            + '<div class="input_horzenum_button input_horzenum_left '+ (input.value <= 0 && !input.loop ? 'bg_dis' : 'bg_sec bg_hl') +'">'
                                 + '<svg>'
                                     + '<polygon points="10,17 20,10 20,24"/>'
                                 + '</svg>'
@@ -506,7 +506,7 @@
                 target.appendChild(new Range().createContextualFragment(semiproduct
                                 + '</div>'
                             + '</div>'
-                            + '<div class="input_horzenum_button input_horzenum_right '+ (input.value >= input.values.length - 1 && !input.loop ? 'color_disabled' : 'color_secondary highlightable') +'">'
+                            + '<div class="input_horzenum_button input_horzenum_right '+ (input.value >= input.values.length - 1 && !input.loop ? 'bg_dis' : 'bg_sec bg_hl') +'">'
                                 + '<svg>'
                                     + '<polygon points="10,10 20,17 10,24"/>'
                                 + '</svg>'
@@ -620,7 +620,7 @@
                     currentZIndex++;
                     var semiproduct = '<div class="input_vertenum_overlayscroller" style="z-index:' + currentZIndex + ';">';
                     for (var i = 0; i < this.values.length; i++) {
-                        semiproduct += '<div class="input_vertenum_value color_secondary highlightable">' + this.values[i] + '</div>';
+                        semiproduct += '<div class="input_vertenum_value bg_sec bg_hl">' + this.values[i] + '</div>';
                     }
                     document.body.appendChild(new Range().createContextualFragment(semiproduct + '</div>'));
                     this.overlayScroller = document.getElementsByClassName("input_vertenum_overlayscroller")[0];
@@ -668,7 +668,7 @@
                 target.appendChild(new Range().createContextualFragment(semiproduct
                             + '</div>'
                         + '</div>'
-                        + '<div class="input_vertenum_button color_secondary highlightable">'
+                        + '<div class="input_vertenum_button bg_sec bg_hl">'
                             + '<svg>'
                                 + '<polygon points="10,13 21,13 16,6"/>'
                                 + '<polygon points="10,21 21,21 16,28"/>'
@@ -907,7 +907,7 @@
                         that.beginEditing(e);
                     };
                     document.body.appendChild(new Range().createContextualFragment(''
-                        + '<div id="input_color_panel" class="input_color_panel color_primary" style="z-index:' + currentZIndex + '; top:'+(rect.top+rect.height+window.scrollY)+ 'px; left:'+(rect.left+window.scrollX)+'px;">'
+                        + '<div id="input_color_panel" class="input_color_panel bg_pri brd_txt" style="z-index:' + currentZIndex + '; top:'+(rect.top+rect.height+window.scrollY)+ 'px; left:'+(rect.left+window.scrollX)+'px;">'
                             + '<div class="input_color_wheelpanel"></div>'
                             + '<div class="input_color_switchpanel">'
                                 + '<div>RGB</div>'
