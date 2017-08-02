@@ -1,3 +1,8 @@
+var inputIds = 0;
+var currentZIndex = 1;
+var inputSlots = new Array();
+var interceptors = new Array();
+
 { //Slot re-reformed
             function InputSlot(id, type, label, input) {
                 var that = this;
