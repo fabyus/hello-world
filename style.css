@@ -113,12 +113,11 @@ a:hover, a.active {color: #32B4FF;}
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	position: fixed;
+	position: absolute;
 	top: 0px;
 	left: 0px;
 	background-color: #000000;
 	opacity: 0.5;
-	z-index: 2;
 }
 
 #popupper {
@@ -126,10 +125,9 @@ a:hover, a.active {color: #32B4FF;}
 	height: 100%;
 	margin: 0px;
 	padding:0px;
-	position:fixed;
+	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: 3;
 }
 
 #popup {
@@ -202,7 +200,6 @@ a:hover, a.active {color: #32B4FF;}
 	border-top: 14px solid #2ae2d6;
 	border-radius: 50%;
 	position: relative;
-	z-index: 5;
 	animation: loaderSpin 1.5s linear infinite;
 }
 
@@ -291,7 +288,8 @@ a:hover, a.active {color: #32B4FF;}
     border-radius: 10px;
     border-style: none;
     outline: none;
-    font-size: 16px;
+	font-size: 16px;
+	text-align: left;
 }
 
 .input_range,
@@ -334,6 +332,7 @@ a:hover, a.active {color: #32B4FF;}
 	border-style: none;
 	outline: none;
 	user-select: none;
+	text-align: left;
 }
 
 .input_horzenum {
@@ -455,6 +454,7 @@ body>.input_color_cell {
 .input_color_text {
 	position: absolute;
 	top: 0px;
+	text-align: left;
 }
 
 .input_color_panel {
