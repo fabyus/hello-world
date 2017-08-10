@@ -145,6 +145,7 @@ var interceptors = new Array();
                 if(options.onFalse != null){
                     input.onFalse = options.onFalse;
                 }
+                input.onChange();
                 return input;
             }
         }
@@ -191,6 +192,7 @@ var interceptors = new Array();
                 if(options.onFilled != null){
                     input.onFilled = options.onFilled;
                 }
+                input.onChange();
                 return input;
             }
         }
@@ -402,6 +404,7 @@ var interceptors = new Array();
                 input.element.addEventListener("mousedown", function(e) {
                     input.beginSliding(e)
                 });
+                input.onChange();
                 return input;
             }
         }
@@ -547,6 +550,7 @@ var interceptors = new Array();
                 if(options.onLoopRight != null){
                     input.onLoopRight = options.onLoopRight;
                 };
+                input.onChange();
                 return input;
             }
         }
@@ -693,6 +697,7 @@ var interceptors = new Array();
                 if(options.onChange != null){
                     input.onChange = options.onChange;
                 };
+                input.onChange();
                 return input;
             }
         }
@@ -1099,6 +1104,7 @@ var interceptors = new Array();
                 input.element.addEventListener("click", function(e) {
                     input.openPanel(e)
                 });
+                input.onChange();
                 return input;
             }
 
@@ -1212,6 +1218,7 @@ var interceptors = new Array();
                     };
                     this.beginDragging = function(e) {
                         // console.log("wheel begin dragging");
+                        this.rect = this.element.getBoundingClientRect();
                         var interceptor = newInterceptor(this);
                         interceptor.onMouseUp = function(e) {
                             destroyInterceptor();
