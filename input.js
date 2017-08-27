@@ -145,7 +145,7 @@ var interceptors = new Array();
                 if(options.onFalse != null){
                     input.onFalse = options.onFalse;
                 }
-                input.onChange();
+                // input.onChange();
                 return input;
             }
         }
@@ -192,7 +192,7 @@ var interceptors = new Array();
                 if(options.onFilled != null){
                     input.onFilled = options.onFilled;
                 }
-                input.onChange();
+                // input.onChange();
                 return input;
             }
         }
@@ -404,7 +404,7 @@ var interceptors = new Array();
                 input.element.addEventListener("mousedown", function(e) {
                     input.beginSliding(e)
                 });
-                input.onChange();
+                // input.onChange();
                 return input;
             }
         }
@@ -550,7 +550,7 @@ var interceptors = new Array();
                 if(options.onLoopRight != null){
                     input.onLoopRight = options.onLoopRight;
                 };
-                input.onChange();
+                // input.onChange();
                 return input;
             }
         }
@@ -697,7 +697,7 @@ var interceptors = new Array();
                 if(options.onChange != null){
                     input.onChange = options.onChange;
                 };
-                input.onChange();
+                // input.onChange();
                 return input;
             }
         }
@@ -933,7 +933,7 @@ var interceptors = new Array();
                     }
                     this.hsv = false;
                     var rgbhsv = newInputBool(this.panel.getElementsByClassName("input_color_switchpanel")[0].children[1],'rgbhsv',false,false,{"onChange":function(e){
-                            that.hsv = this.value;
+                            that.hsv = rgbhsv.value;
                             if(that.hsv){
                                 that.bar0.prefix = 'Hue: ';
                                 that.bar1.prefix = 'Saturation: ';
@@ -1104,7 +1104,7 @@ var interceptors = new Array();
                 input.element.addEventListener("click", function(e) {
                     input.openPanel(e)
                 });
-                input.onChange();
+                // input.onChange();
                 return input;
             }
 
