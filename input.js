@@ -933,7 +933,7 @@ var interceptors = new Array();
                     }
                     this.hsv = false;
                     var rgbhsv = newInputBool(this.panel.getElementsByClassName("input_color_switchpanel")[0].children[1],'rgbhsv',false,false,{"onChange":function(e){
-                            that.hsv = rgbhsv.value;
+                            that.hsv = this.value;
                             if(that.hsv){
                                 that.bar0.prefix = 'Hue: ';
                                 that.bar1.prefix = 'Saturation: ';
