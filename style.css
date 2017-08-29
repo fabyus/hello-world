@@ -373,7 +373,7 @@
 	}
 
 	.input_bool_ball {
-		background-color: #E7D6FF;
+		/*background-color: #E7D6FF;*/
 		width: 24px;
 		height: 24px;
 		margin: 4px;
@@ -402,7 +402,7 @@
 		height: 34px;
 		margin: 4px 8px;
 		border-radius: 10px;
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
 		overflow: hidden;
 		cursor: e-resize;
 	}
@@ -453,6 +453,8 @@
 
 	.input_horzenum_left {
 		border-radius: 10px 0px 0px 10px;
+		position: relative;
+		top: 1px; /*fixes annoying nonalignment*/
 	}
 
 	.input_horzenum_right {
@@ -464,7 +466,7 @@
 		width: 160px;
 		height: 34px;
 		margin: 0px;
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
 		overflow: hidden;
 		user-select: none;
 		cursor: default;
@@ -492,8 +494,9 @@
 		display: inline-block;
 		width: 30px;
 		height: 34px;
-		margin: 1px 0px 0px 0px;
 		border-radius: 0px 10px 10px 0px;
+		position: relative;
+		top: 1px; /*fixes annoying nonalignment*/
 		cursor: pointer;
 	}
 
@@ -502,7 +505,7 @@
 		width: 190px;
 		height: 34px;
 		border-radius: 10px 0px 0px 10px;
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
 		overflow: hidden;
 	}
 
