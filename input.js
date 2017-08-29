@@ -130,7 +130,7 @@ var interceptors = new Array();
                 }
                 target.appendChild(new Range().createContextualFragment(''
                     + '<div id="i' + input.id + '" class="input_bool_pill ' + (value ? "bg_sec" : "bg_dis") + ' bg_hl">'
-                        + '<div class="input_bool_ball" style="left:' + (value ? '50%' : '0%') + '"></div>'
+                        + '<div class="input_bool_ball bg_bg" style="left:' + (value ? '50%' : '0%') + '"></div>'
                     + '</div>'));
                 input.element = document.getElementById("i"+input.id);
                 input.element.addEventListener("click", function(e) {
@@ -178,7 +178,7 @@ var interceptors = new Array();
                     target = newInputSlot(input.id, target, label, 'text', input).rbox;
                 }
                 target.appendChild(new Range().createContextualFragment(''
-                    + '<input type="text" id="i' + input.id + '" class="input_text" value="' + value + '" placeholder="' + (options.placeholder!=null?options.placeholder:'') + '"/>'));
+                    + '<input type="text" id="i' + input.id + '" class="input_text bg_bg" value="' + value + '" placeholder="' + (options.placeholder!=null?options.placeholder:'') + '"/>'));
                 input.element = document.getElementById("i"+input.id);
                 input.element.addEventListener("input", function(e) {
                     input.change(e)
@@ -365,7 +365,7 @@ var interceptors = new Array();
                     target = newInputSlot(input.id, target, label, 'range', input).rbox;
                 }
                 target.appendChild(new Range().createContextualFragment(''
-                    + '<div id="i' + input.id + '" class="input_range">'
+                    + '<div id="i' + input.id + '" class="input_range bg_bg">'
                         + '<div class="input_range_slider bg_sec bg_hl" style="width:' + ((input.value - input.min) * 220 / (input.max - input.min)) + 'px">'
                             + '<div class="input_range_text">' + input.prefix + input.value + input.suffix + '</div>'
                         + '</div>'
@@ -506,7 +506,7 @@ var interceptors = new Array();
                                     + '<polygon points="10,17 20,10 20,24"/>'
                                 + '</svg>'
                             + '</div>'
-                            + '<div class="input_horzenum_cell">'
+                            + '<div class="input_horzenum_cell bg_bg">'
                                 + '<div class="input_horzenum_scroller">';
                 for (var i = 0; i < input.values.length; i++) {
                     semiproduct += '<div class="input_horzenum_value">' + input.values[i] + '</div>';
@@ -669,7 +669,7 @@ var interceptors = new Array();
                 }
                 var semiproduct = ''
                     + '<div id="i' + input.id + '" class="input_vertenum">'
-                        + '<div class="input_vertenum_cell">'
+                        + '<div class="input_vertenum_cell bg_bg">'
                             + '<div class="input_vertenum_scroller">';
                 for (var i = 0; i < input.values.length; i++) {
                     semiproduct += '<div class="input_vertenum_value">' + input.values[i] + '</div>';
